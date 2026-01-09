@@ -1,54 +1,31 @@
-# Angular & Spring Boot User Management System
+# User Management System – Spring Boot REST API
 
-A full-stack User Management System built with **Angular** and **Spring Boot**, featuring secure authentication, role-based access control (RBAC), and user administration. This project demonstrates best practices for building scalable, maintainable enterprise applications.
+A backend-only **User Management System** built with **Spring Boot**, providing secure RESTful APIs for user authentication, authorization, and role-based access control (RBAC). This project is designed to be consumed by frontend applications such as Angular or React.
 
 ## Features
 
 * User authentication and authorization
 * Role-based access control (RBAC)
 * User CRUD operations (Create, Read, Update, Delete)
-* Protected routes using Angular Route Guards
-* RESTful API communication
-* Modular and reusable frontend components
-* Clean layered backend architecture
-* Responsive UI
+* Secure RESTful APIs
+* Layered architecture (Controller, Service, Repository)
+* Exception handling and validation
+* Scalable and maintainable backend design
 
 ## Tech Stack
 
-### Frontend
-
-* Angular
-* TypeScript
-* Angular Router & Guards
-* HTTP Client
-
-### Backend
-
+* Java
 * Spring Boot
-* Maven
-* RESTful APIs
 * Spring Security
+* Maven
 * JPA / Hibernate
+* RESTful APIs
 
-### Database
+## Database
 
-* MySQL 
+* MySQL
 
 ## Project Structure
-
-### Frontend (Angular)
-
-```
-src/app/
- ├── auth/
- ├── users/
- ├── roles/
- ├── guards/
- ├── services/
- └── shared/
-```
-
-### Backend (Spring Boot)
 
 ```
 src/main/java/
@@ -56,49 +33,44 @@ src/main/java/
  ├── service/
  ├── repository/
  ├── model/
- └── security/
+ ├── dto/
+ ├── security/
+ └── exception/
 ```
 
 ## Getting Started
 
 ### Prerequisites
 
-* Node.js (v14+ recommended)
-* Angular CLI
 * Java 17+
 * Maven
 
-### Backend Setup
+### Run the Application
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-The backend will start on `http://localhost:8080/`.
+The application will start on `http://localhost:8080/`.
 
-### Frontend Setup
+## API Usage
 
-```bash
-npm install
-ng serve
-```
-
-Navigate to `http://localhost:4200/`.
+This project exposes REST APIs that can be consumed by any frontend framework (Angular, React, etc.) or API client tools like Postman.
 
 ## Security
 
-* Session-based authentication
-* Role-based authorization at API and UI level
-* Secured endpoints using Spring Security
-* Client-side route protection using Angular Guards
+* Spring Security–based authentication
+* Role-based authorization
+* Protected endpoints
+* Secure request handling
 
-## Future Improvements
+## Future Enhancements
 
+* Session based authentication
 * Refresh token support
-* User activity audit logs
-* Pagination, sorting, and filtering
-* Unit and integration tests
-* Docker support
+* Pagination and filtering
+* API documentation with Swagger/OpenAPI
+* Dockerization
 
 ## License
 
